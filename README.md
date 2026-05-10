@@ -1,7 +1,7 @@
 # Godot Action & Adventure RPG Game
 
-### Developed by [Michael Games](https://www.youtube.com/@MichaelGamesOfficial)
-
+### Guide by [Michael Games](https://www.youtube.com/@MichaelGamesOfficial)
+### Done by [Me](https://github.com/eapzzz)
 ---
 
 ### Project Guide
