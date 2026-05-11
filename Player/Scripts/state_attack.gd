@@ -11,7 +11,7 @@ var attacking: bool = false
 
 @onready var walk: State = $"../Walk"
 @onready var idle: State_Idle = $"../Idle"
-@onready var hurt_box: HurtBox = $"../../Interactions/HurtBox"
+@onready var hurt_box: HurtBox = %AttackHurtBox
 
 ## What happens when the player enters this State?
 func Enter() -> void:
