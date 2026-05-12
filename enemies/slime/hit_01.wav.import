@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://qsv6fm6yebc"
-path="res://.godot/imported/hit_00.wav-7895bb9e526aac070cdf28e4b80139ec.sample"
+uid="uid://c0qxrfchw2arc"
+path="res://.godot/imported/hit_01.wav-5741b8fa9d470a638cb59f9b3641df34.sample"
 
 [deps]
 
-source_file="res://aargps_assets/hit_00.wav"
-dest_files=["res://.godot/imported/hit_00.wav-7895bb9e526aac070cdf28e4b80139ec.sample"]
+source_file="res://enemies/slime/hit_01.wav"
+dest_files=["res://.godot/imported/hit_01.wav-5741b8fa9d470a638cb59f9b3641df34.sample"]
 
 [params]
 
