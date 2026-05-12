@@ -8,18 +8,22 @@ var current_state: State
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_DISABLED
+	pass
 
 
 func _process(delta: float) -> void:
 	change_state(current_state.process(delta))
+	pass
 
 
 func _physics_process(delta: float) -> void:
 	change_state(current_state.physics(delta))
+	pass
 
 
 func _unhandled_input(event: InputEvent) -> void:
 	change_state(current_state.handle_input(event))
+	pass
 
 
 func initialize(_player: Player) -> void:
@@ -40,7 +44,8 @@ func initialize(_player: Player) -> void:
 	
 	change_state(states[0])
 	process_mode = Node.PROCESS_MODE_INHERIT
-
+	
+	pass
 
 func change_state(new_state: State) -> void:
 	if new_state == null or new_state == current_state:
@@ -52,3 +57,5 @@ func change_state(new_state: State) -> void:
 	prev_state = current_state
 	current_state = new_state
 	current_state.enter()
+	
+	pass

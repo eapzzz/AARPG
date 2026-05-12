@@ -6,6 +6,7 @@ extends Node2D
 
 func _ready() -> void:
 	player.direction_changed.connect(_update_direction)
+	pass
 
 
 func _update_direction(new_direction: Vector2) -> void:
@@ -20,3 +21,4 @@ func _update_direction(new_direction: Vector2) -> void:
 			rotation_degrees = -90
 		_:
 			rotation_degrees = 0
+	pass

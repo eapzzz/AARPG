@@ -18,8 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*uid://3rnpe4jx7br2"
-PlayerManager="*uid://cwvtlya7vog2f"
 PlayerHud="*uid://c2qudfadoekdx"
+PlayerManager="*uid://cwvtlya7vog2f"
 
 [display]
 

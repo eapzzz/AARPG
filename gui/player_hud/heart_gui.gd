@@ -11,3 +11,4 @@ var value: int = 2:
 
 func update_sprite() -> void:
 	sprite.frame = value
+	pass
