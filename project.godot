@@ -102,6 +102,10 @@ pause={
 2d_physics/layer_5="Walls"
 2d_physics/layer_9="Enemy"
 
+[network]
+
+limits/templates_search_path="res://script_templates"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

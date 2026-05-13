@@ -1,0 +1,10 @@
+[gd_resource type="Theme" format=3 uid="uid://dnygjlte4bceb"]
+
+[ext_resource type="FontFile" uid="uid://bws8ywm6ubapl" path="res://fonts/editundo.ttf" id="1_ljexp"]
+
+[resource]
+Button/font_sizes/font_size = 32
+Button/fonts/font = ExtResource("1_ljexp")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0.49019608)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_ljexp")

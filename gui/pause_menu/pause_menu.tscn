@@ -1,55 +1,156 @@
 [gd_scene format=3 uid="uid://fft2clkfyt2x"]
 
 [ext_resource type="Script" uid="uid://bogejxhv3pois" path="res://gui/pause_menu/pause_menu.gd" id="1_rwe7i"]
+[ext_resource type="FontFile" uid="uid://bws8ywm6ubapl" path="res://fonts/editundo.ttf" id="2_1wcnx"]
+[ext_resource type="Texture2D" uid="uid://eiaue10mugeg" path="res://items/sprites/items.png" id="3_u4fh8"]
+[ext_resource type="Theme" uid="uid://dnygjlte4bceb" path="res://fonts/font.tres" id="3_vwsmh"]
+[ext_resource type="PackedScene" uid="uid://ceoaksai3yr1" path="res://gui/pause_menu/inventory/inventory_slot.tscn" id="4_ddhtv"]
+[ext_resource type="Script" uid="uid://b51mtob3pito7" path="res://gui/pause_menu/inventory/scripts/inventory_ui.gd" id="4_t7424"]
+[ext_resource type="Resource" uid="uid://blj4h7rnd0fmh" path="res://gui/pause_menu/inventory/player_inventory.tres" id="5_nbojc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddhtv"]
+atlas = ExtResource("3_u4fh8")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7424"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_ddhtv")
+texture_margin_left = 14.0
+texture_margin_top = 14.0
+texture_margin_right = 14.0
+texture_margin_bottom = 14.0
 
 [node name="PauseMenu" type="CanvasLayer" unique_id=579476536]
 process_mode = 3
 script = ExtResource("1_rwe7i")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=234622979]
+[node name="Control" type="Control" parent="." unique_id=824130332]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control" unique_id=234622979]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-color = Color(0.24313726, 0.24313726, 0.24313726, 0.7176471)
+color = Color(0.24313726, 0.24313726, 0.24313726, 0.7411765)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=2091719518]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -47.0
-offset_top = -33.0
-offset_right = 47.0
-offset_bottom = 33.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Label" type="Label" parent="Control" unique_id=1321923925]
+modulate = Color(1, 1, 1, 0.6156863)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -15.0
+offset_right = 74.0
+offset_bottom = -60.0
+grow_vertical = 0
+mouse_filter = 1
+theme = ExtResource("3_vwsmh")
+theme_override_fonts/font = ExtResource("2_1wcnx")
+theme_override_font_sizes/font_size = 16
+text = "[ paused ]"
 
-[node name="ButtonSave" type="Button" parent="VBoxContainer" unique_id=598747382]
+[node name="ItemDescription" type="Label" parent="Control" unique_id=361535913]
+modulate = Color(1, 1, 1, 0.6156863)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -150.0
+offset_right = 216.0
+offset_bottom = -82.0
+grow_vertical = 0
+mouse_filter = 1
+theme = ExtResource("3_vwsmh")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.26666668)
+theme_override_fonts/font = ExtResource("2_1wcnx")
+theme_override_font_sizes/font_size = 16
+text = "A valueable gem!"
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=890781738]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 25.0
+offset_top = 25.0
+offset_right = 221.0
+offset_bottom = 113.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_t7424")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer" unique_id=1031134112]
+layout_mode = 2
+columns = 5
+script = ExtResource("4_t7424")
+data = ExtResource("5_nbojc")
+
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" unique_id=704725389 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" unique_id=2028761818 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" unique_id=577009782 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" unique_id=1627364353 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" unique_id=902110534 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" unique_id=1186172666 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Control/PanelContainer/GridContainer" unique_id=1140674146 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Control/PanelContainer/GridContainer" unique_id=845509826 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Control/PanelContainer/GridContainer" unique_id=1977723269 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Control/PanelContainer/GridContainer" unique_id=165134083 instance=ExtResource("4_ddhtv")]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control" unique_id=266008117]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 25.0
+offset_top = -25.0
+offset_right = 150.0
+offset_bottom = -25.0
+grow_vertical = 0
+
+[node name="ButtonSave" type="Button" parent="Control/HBoxContainer" unique_id=598747382]
+custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 mouse_filter = 1
+theme = ExtResource("3_vwsmh")
+theme_override_fonts/font = ExtResource("2_1wcnx")
+theme_override_font_sizes/font_size = 20
 text = "Save"
 
-[node name="ButtonLoad" type="Button" parent="VBoxContainer" unique_id=635594740]
+[node name="ButtonLoad" type="Button" parent="Control/HBoxContainer" unique_id=635594740]
+custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
 mouse_filter = 1
+theme = ExtResource("3_vwsmh")
+theme_override_fonts/font = ExtResource("2_1wcnx")
+theme_override_font_sizes/font_size = 20
 text = "Load"
-
-[node name="Label" type="Label" parent="." unique_id=1321923925]
-modulate = Color(1, 1, 1, 0.6156863)
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -38.0
-offset_top = -75.0
-offset_right = 38.0
-offset_bottom = -75.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 1
-text = "[ paused ]"
