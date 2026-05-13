@@ -7,6 +7,6 @@ func _ready() -> void:
 	pass
 
 
-func _take_damage(_hurt_box: HurtBox) -> void:
+func _take_damage(_damage: HurtBox) -> void:
 	queue_free()
 	pass

@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="AARPG"
-run/main_scene="res://playground.tscn"
+run/main_scene="uid://cltci6vpcrop7"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 LevelManager="*uid://3rnpe4jx7br2"
 PlayerHud="*uid://c2qudfadoekdx"
 PlayerManager="*uid://cwvtlya7vog2f"
+SceneTransition="*uid://bu1cxxl11qpup"
 
 [display]
 
