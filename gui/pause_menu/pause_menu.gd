@@ -5,6 +5,7 @@ signal hidden
 
 var is_paused := false
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var button_save: Button = $Control/HBoxContainer/ButtonSave
 @onready var button_load: Button = $Control/HBoxContainer/ButtonLoad
 @onready var item_description: Label = $Control/ItemDescription
@@ -12,6 +13,7 @@ var is_paused := false
 
 func _ready() -> void:
 	hide_pause_menu()
+	item_description.text = ""
 	button_save.pressed.connect(_on_save_pressed)
 	button_load.pressed.connect(_on_load_pressed)
 	pass
@@ -62,4 +64,10 @@ func _on_load_pressed() -> void:
 
 func update_item_description(new_text: String) -> void:
 	item_description.text = new_text
+	pass
+
+
+func play_audio(audio: AudioStream) -> void:
+	audio_stream_player.stream = audio
+	audio_stream_player.play()
 	pass

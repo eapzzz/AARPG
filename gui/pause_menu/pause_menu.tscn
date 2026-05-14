@@ -154,3 +154,6 @@ theme = ExtResource("3_vwsmh")
 theme_override_fonts/font = ExtResource("2_1wcnx")
 theme_override_font_sizes/font_size = 20
 text = "Load"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1757568921]
+max_polyphony = 4
