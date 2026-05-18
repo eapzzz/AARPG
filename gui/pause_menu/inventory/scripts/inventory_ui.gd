@@ -45,7 +45,7 @@ func item_focused() -> void:
 
 
 func on_inventory_changed() -> void:
-	var i := focus_index
+	#var i := focus_index
 	for idx in range(mini(data.slots.size(), get_child_count())):
 		get_child(idx).slot_data = data.slots[idx]
 	pass
