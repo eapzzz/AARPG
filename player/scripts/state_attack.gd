@@ -25,9 +25,10 @@ func enter() -> void:
 	audio.play()
 
 	attacking = true
-	await get_tree().create_timer(0.075).timeout
-	hurt_box.monitoring = true
 	
+	await get_tree().create_timer(0.075).timeout
+	if attacking:
+		hurt_box.monitoring = true
 	pass
 
 ## What happens when the player exits this State.
@@ -35,8 +36,8 @@ func exit() -> void:
 	animation_player.animation_finished.disconnect(_end_attack)
 	attacking = false
 	hurt_box.monitoring = false
-	
 	pass
+
 
 ## What happens during the _process update in this State.
 func process(_delta: float) -> State:
