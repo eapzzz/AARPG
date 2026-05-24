@@ -531,6 +531,8 @@ _data = {
 &"walk_up": SubResource("Animation_od3ui")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wodsf"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_kb6p2"]
 
 [sub_resource type="Animation" id="Animation_32hag"]
@@ -651,7 +653,6 @@ script = ExtResource("4_gwnis")
 
 [node name="Walk" type="Node" parent="StateMachine" unique_id=1264218053]
 script = ExtResource("5_k53q1")
-move_speed = null
 
 [node name="Attack" type="Node" parent="StateMachine" unique_id=1716899768]
 script = ExtResource("6_fhl08")
@@ -674,6 +675,16 @@ max_polyphony = 4
 
 [node name="Interactions" type="Node2D" parent="." unique_id=1137507681]
 script = ExtResource("10_apopc")
+
+[node name="Area2D" type="Area2D" parent="Interactions" unique_id=1764583019]
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Area2D" unique_id=2006382648]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_wodsf")
+debug_color = Color(0.13725491, 0.75686276, 0.24313726, 0.70980394)
 
 [node name="HitBox" parent="." unique_id=1369213479 instance=ExtResource("13_yllr7")]
 collision_layer = 2
