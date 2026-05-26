@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b2lnc0fjexh6g"
-path="res://.godot/imported/push_stone.wav-5d0f6f0d7f081533342736c0e4ba51f3.sample"
+path="res://.godot/imported/push_stone.wav-3428979241dd81a4495981a4a02fdaaa.sample"
 
 [deps]
 
-source_file="res://aargps_assets/push_stone.wav"
-dest_files=["res://.godot/imported/push_stone.wav-5d0f6f0d7f081533342736c0e4ba51f3.sample"]
+source_file="res://interactables/dungeon/push_stone.wav"
+dest_files=["res://.godot/imported/push_stone.wav-3428979241dd81a4495981a4a02fdaaa.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

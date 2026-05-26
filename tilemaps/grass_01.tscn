@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://ctgy1ie1ucvdn" path="res://tilemaps/sprites/Grass-01.png" id="1_bwooo"]
 [ext_resource type="Script" uid="uid://b4dhnljoc1tt" path="res://tilemaps/level_tile_map.gd" id="2_0vcku"]
+[ext_resource type="Texture2D" uid="uid://bqtwjh62jcvvq" path="res://tilemaps/sprites/dungeon_entrance.png" id="2_8ol6o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0vcku"]
 texture = ExtResource("1_bwooo")
@@ -785,6 +786,27 @@ texture_region_size = Vector2i(32, 32)
 15:7/0/terrains_peering_bit/top_side = 1
 15:7/0/terrains_peering_bit/top_right_corner = 1
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3muyx"]
+texture = ExtResource("2_8ol6o")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 6, -16, 8, 4, 4, 12, -16, 14)
+1:2/0 = 0
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(16, -16, -6, -16, -4, -8, -6, 4, -4, 12, 16, 14)
+
 [sub_resource type="TileSet" id="TileSet_8jh35"]
 tile_size = Vector2i(32, 32)
 physics_layer_0/collision_layer = 16
@@ -795,6 +817,7 @@ terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 terrain_set_0/terrain_1/name = "Grass"
 terrain_set_0/terrain_1/color = Color(0.76625764, 0.21019468, 0.25409496, 1)
 sources/0 = SubResource("TileSetAtlasSource_0vcku")
+sources/1 = SubResource("TileSetAtlasSource_3muyx")
 
 [node name="Grass-01" type="TileMapLayer" unique_id=226024561]
 z_index = -1

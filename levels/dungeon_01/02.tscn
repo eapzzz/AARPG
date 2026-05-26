@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://l2ae04xvynkh"]
+
+[ext_resource type="Script" uid="uid://d3euui4x3rdlw" path="res://levels/scripts/level.gd" id="1_6jfx3"]
+[ext_resource type="PackedScene" uid="uid://b5uxqkadlp5ta" path="res://tilemaps/dungeon_01.tscn" id="2_sg736"]
+[ext_resource type="PackedScene" uid="uid://dbhv13lwe7daf" path="res://levels/player_spawn.tscn" id="3_fgcuv"]
+[ext_resource type="PackedScene" uid="uid://c8vv686s1e0db" path="res://levels/level_transition.tscn" id="4_mp80t"]
+
+[node name="02" type="Node2D" unique_id=1951015708]
+script = ExtResource("1_6jfx3")
+
+[node name="Dungeon01Tilemap" parent="." unique_id=226024561 instance=ExtResource("2_sg736")]
+
+[node name="PlayerSpawn" parent="." unique_id=2147274448 instance=ExtResource("3_fgcuv")]
+position = Vector2(295, 252)
+
+[node name="LevelTransition" parent="." unique_id=1939882991 instance=ExtResource("4_mp80t")]
+position = Vector2(288, 304)
+level = "uid://co4pffprj73ee"
+target_transition_area = "LevelTransition2"
+center_player = true
+size = 1
+side = 3
+
+[node name="LevelTransition2" parent="." unique_id=207859024 instance=ExtResource("4_mp80t")]
+position = Vector2(288, 80)
+level = "uid://l2ae04xvynkh"
+size = 1
+side = 2
