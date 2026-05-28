@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://ds7c1u2qyuykj"
-path="res://.godot/imported/dungeon_discovery.wav-a0b11872db730e9b20fc74873a276b5b.sample"
+path="res://.godot/imported/dungeon_discovery.wav-ab508133ed68c38867657c9387d79ac7.sample"
 
 [deps]
 
-source_file="res://aargps_assets/dungeon_discovery.wav"
-dest_files=["res://.godot/imported/dungeon_discovery.wav-a0b11872db730e9b20fc74873a276b5b.sample"]
+source_file="res://general_nodes/item_droppper/dungeon_discovery.wav"
+dest_files=["res://.godot/imported/dungeon_discovery.wav-ab508133ed68c38867657c9387d79ac7.sample"]
 
 [params]
 

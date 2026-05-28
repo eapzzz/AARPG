@@ -18,7 +18,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAQAJAAAAAAABAAAAAQAKAAAAAAACAAAAAQALAAA
 position = Vector2(295, 252)
 
 [node name="LevelTransition" parent="." unique_id=1939882991 instance=ExtResource("4_fpj2o")]
-position = Vector2(288, 304)
+position = Vector2(288, 312)
 level = "uid://cltci6vpcrop7"
 target_transition_area = "LevelTransition3"
 center_player = true
@@ -26,7 +26,7 @@ size = 1
 side = 3
 
 [node name="LevelTransition2" parent="." unique_id=207859024 instance=ExtResource("4_fpj2o")]
-position = Vector2(288, 80)
+position = Vector2(288, 72)
 level = "uid://l2ae04xvynkh"
 size = 1
 side = 2
