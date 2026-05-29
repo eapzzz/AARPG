@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dbhv13lwe7daf" path="res://levels/player_spawn.tscn" id="3_e1qfi"]
 [ext_resource type="PackedScene" uid="uid://c8vv686s1e0db" path="res://levels/level_transition.tscn" id="4_aym8a"]
 
-[node name="01" type="Node2D" unique_id=1951015708]
+[node name="04" type="Node2D" unique_id=1951015708]
 script = ExtResource("1_oypxi")
 
 [node name="Dungeon01Tilemap" parent="." unique_id=226024561 instance=ExtResource("2_jfldx")]

@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://vwvgjyv6uc8h"
-path="res://.godot/imported/boomerang.wav-26bb1444ba8481c53a5b204c14defba2.sample"
+path="res://.godot/imported/boomerang.wav-4e2d977064b8834fbbd81ccc720b618e.sample"
 
 [deps]
 
-source_file="res://aargps_assets/boomerang.wav"
-dest_files=["res://.godot/imported/boomerang.wav-26bb1444ba8481c53a5b204c14defba2.sample"]
+source_file="res://player/audio/boomerang.wav"
+dest_files=["res://.godot/imported/boomerang.wav-4e2d977064b8834fbbd81ccc720b618e.sample"]
 
 [params]
 
@@ -18,7 +18,7 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
+edit/loop_mode=2
 edit/loop_begin=0
 edit/loop_end=-1
 compress/mode=2

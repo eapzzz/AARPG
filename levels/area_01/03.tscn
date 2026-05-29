@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://21t22vjvneei" path="res://enemies/slime/slime.tscn" id="4_eg7qv"]
 [ext_resource type="PackedScene" uid="uid://c8vv686s1e0db" path="res://levels/level_transition.tscn" id="5_8nvhf"]
 
-[node name="01" type="Node2D" unique_id=1466939911]
+[node name="03" type="Node2D" unique_id=1466939911]
 script = ExtResource("1_qfrs7")
 
 [node name="Grass-01" parent="." unique_id=226024561 instance=ExtResource("2_eg7qv")]

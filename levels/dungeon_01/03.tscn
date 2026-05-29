@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dftlsxvvc3683" path="res://general_nodes/item_droppper/item_dropper.tscn" id="7_v1lkg"]
 [ext_resource type="Resource" uid="uid://drbmxi5qakx1o" path="res://items/key_dungeon.tres" id="8_qvbd0"]
 
-[node name="02" type="Node2D" unique_id=1951015708]
+[node name="03" type="Node2D" unique_id=1951015708]
 script = ExtResource("1_0rcwh")
 
 [node name="Dungeon01Tilemap" parent="." unique_id=226024561 instance=ExtResource("2_cr3p5")]
