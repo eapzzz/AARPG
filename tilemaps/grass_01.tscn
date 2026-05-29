@@ -819,7 +819,7 @@ terrain_set_0/terrain_1/color = Color(0.76625764, 0.21019468, 0.25409496, 1)
 sources/0 = SubResource("TileSetAtlasSource_0vcku")
 sources/1 = SubResource("TileSetAtlasSource_3muyx")
 
-[node name="Grass-01" type="TileMapLayer" unique_id=226024561]
+[node name="Grass01" type="TileMapLayer" unique_id=226024561]
 z_index = -1
 tile_set = SubResource("TileSet_8jh35")
 rendering_quadrant_size = 32

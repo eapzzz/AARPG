@@ -2,12 +2,13 @@
 
 [ext_resource type="Script" uid="uid://3mpvk1nxua70" path="res://items/item_pickup/item_pickup.gd" id="1_0g51u"]
 [ext_resource type="AudioStream" uid="uid://dljlkkbjh55tb" path="res://items/item_pickup/item_pickup.wav" id="2_0rscd"]
+[ext_resource type="Resource" uid="uid://8qgcg0rmriho" path="res://items/gem.tres" id="2_7rq5k"]
 [ext_resource type="Texture2D" uid="uid://b8bduxd7punv5" path="res://player/sprites/Shadow.png" id="2_jl14n"]
 [ext_resource type="Texture2D" uid="uid://eiaue10mugeg" path="res://items/sprites/items.png" id="3_tc5ok"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h2pfg"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7rq5k"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbvxt"]
 atlas = ExtResource("3_tc5ok")
 region = Rect2(0, 0, 32, 32)
 
@@ -53,6 +54,7 @@ collision_layer = 0
 collision_mask = 16
 motion_mode = 1
 script = ExtResource("1_0g51u")
+item_data = ExtResource("2_7rq5k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1215902802]
 shape = SubResource("CircleShape2D_h2pfg")
@@ -69,7 +71,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_jl14n")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=133923184]
-texture = SubResource("AtlasTexture_7rq5k")
+texture = SubResource("AtlasTexture_gbvxt")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1749846786]
 stream = ExtResource("2_0rscd")
