@@ -772,6 +772,7 @@ next_state = NodePath("../Idle")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=504268883]
 max_polyphony = 4
+bus = &"SFX"
 
 [node name="DestroyEffectSprite" type="Sprite2D" parent="." unique_id=1272689088]
 visible = false
