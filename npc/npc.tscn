@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://dvhdmorcq4463"]
+
+[ext_resource type="Script" uid="uid://cu0tr4f6n4hu4" path="res://npc/scripts/npc.gd" id="1_2xp5l"]
+[ext_resource type="Texture2D" uid="uid://cqckpbfonkyd0" path="res://npc/sprites/npc_sprite_02.png" id="2_3i1kj"]
+[ext_resource type="Texture2D" uid="uid://b8bduxd7punv5" path="res://player/sprites/Shadow.png" id="3_o6cys"]
+
+[sub_resource type="Animation" id="Animation_3i1kj"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_o6cys"]
+resource_name = "idle_down"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ldo70"]
+resource_name = "idle_side"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+
+[sub_resource type="Animation" id="Animation_fnhme"]
+resource_name = "idle_up"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_uamtn"]
+resource_name = "walk_down"
+length = 1.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 5, 4]
+}
+
+[sub_resource type="Animation" id="Animation_ocili"]
+resource_name = "walk_side"
+length = 1.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [11, 12, 13, 14, 13, 12]
+}
+
+[sub_resource type="Animation" id="Animation_phifv"]
+resource_name = "walk_up"
+length = 1.2
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10, 9, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wuxkc"]
+_data = {
+&"RESET": SubResource("Animation_3i1kj"),
+&"idle_down": SubResource("Animation_o6cys"),
+&"idle_side": SubResource("Animation_ldo70"),
+&"idle_up": SubResource("Animation_fnhme"),
+&"walk_down": SubResource("Animation_uamtn"),
+&"walk_side": SubResource("Animation_ocili"),
+&"walk_up": SubResource("Animation_phifv")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ldo70"]
+radius = 8.0
+height = 24.0
+
+[node name="NPC" type="CharacterBody2D" unique_id=300529713]
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("1_2xp5l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1680981042]
+position = Vector2(0, -20)
+texture = ExtResource("2_3i1kj")
+hframes = 15
+
+[node name="ShadowSprite" type="Sprite2D" parent="Sprite2D" unique_id=1258527944]
+modulate = Color(0, 0, 0, 0.7882353)
+show_behind_parent = true
+position = Vector2(0, 20)
+texture = ExtResource("3_o6cys")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=2022359877]
+libraries/ = SubResource("AnimationLibrary_wuxkc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1610652621]
+rotation = -1.5707964
+shape = SubResource("CapsuleShape2D_ldo70")
+debug_color = Color(0, 0.6013788, 0.70120233, 0)
