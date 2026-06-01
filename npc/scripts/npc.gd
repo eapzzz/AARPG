@@ -7,10 +7,10 @@ signal do_behaviour_enabled
 
 @export var npc_resource: NPCResource: set = _set_npc_resource
 
-var state := "idle"
-var direction := Vector2.DOWN
-var direction_name := "down"
-var do_behaviour := true
+var state: String = "idle"
+var direction: Vector2 = Vector2.DOWN
+var direction_name: String = "down"
+var do_behaviour: bool = true
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation: AnimationPlayer = $AnimationPlayer
@@ -44,7 +44,7 @@ func update_direction(target_position: Vector2) -> void:
 	pass
 
 func update_direction_name() -> void: 
-	var threshold := 0.45
+	var threshold: float = 0.45
 	if direction.y < -threshold:
 		direction_name = "up"
 	elif direction.y > threshold:

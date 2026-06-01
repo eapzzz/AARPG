@@ -16,7 +16,7 @@ func _on_enemy_destroyed(e: Node2D) -> void:
 
 
 func enemy_count() -> int:
-	var _count := 0
+	var _count: int = 0
 	for c in get_children():
 		if c is Enemy:
 			_count += 1

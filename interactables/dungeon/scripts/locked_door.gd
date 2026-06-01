@@ -5,7 +5,7 @@ extends Node2D
 @export var locked_audio: AudioStream
 @export var open_audio: AudioStream 
 
-var is_open := false
+var is_open: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D

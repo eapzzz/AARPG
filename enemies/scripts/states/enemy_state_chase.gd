@@ -3,7 +3,7 @@ extends EnemyState
 
 @export var anim_name: String = "chase"
 @export var chase_speed: float = 40.0
-@export var turn_rate := 0.25
+@export var turn_rate: float = 0.25
 @export_category("AI")
 @export var vision_area: VisionArea
 @export var attack_area: HurtBox
@@ -12,7 +12,7 @@ extends EnemyState
 
 var _timer: float = 0.0
 var _direction: Vector2
-var _can_see_player := false
+var _can_see_player: bool = false
 
 
 ## What happens when we initialize this state.

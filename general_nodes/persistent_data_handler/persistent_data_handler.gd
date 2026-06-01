@@ -3,7 +3,7 @@ extends Node
 
 signal data_loaded
 
-var value := false
+var value: bool = false
 
 
 func _ready() -> void:

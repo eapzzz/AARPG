@@ -30,7 +30,7 @@ func update_inventory(i: int = 0) -> void:
 		new_slot.focus_entered.connect(item_focused)
 
 	await get_tree().process_frame
-	var count := get_child_count()
+	var count: int = get_child_count()
 	if count > 0:
 		get_child(clampi(i, 0, count - 1)).grab_focus()
 	pass
@@ -45,7 +45,7 @@ func item_focused() -> void:
 
 
 func on_inventory_changed() -> void:
-	#var i := focus_index
+	#var i: int = focus_index
 	for idx in range(mini(data.slots.size(), get_child_count())):
 		get_child(idx).slot_data = data.slots[idx]
 	pass

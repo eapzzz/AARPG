@@ -1,8 +1,8 @@
 class_name ItemData
 extends Resource
 
-@export var name := ""
-@export_multiline var description := ""
+@export var name: String = ""
+@export_multiline var description: String = ""
 @export var texture: Texture2D
 @export_category("Item Use Effects")
 @export var effects: Array[ItemEffect]

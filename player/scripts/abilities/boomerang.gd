@@ -3,13 +3,13 @@ extends Node2D
 
 enum State {INACTIVE, THROW, RETURN}
 
-@export var acceleration := 500.0
-@export var max_speed := 400.0
+@export var acceleration: float = 500.0
+@export var max_speed: float = 400.0
 @export var catch_audio: AudioStream
 
 var player: Player
 var direction: Vector2
-var speed := 0.0
+var speed: float = 0.0
 var state
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer

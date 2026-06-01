@@ -1,10 +1,10 @@
 extends Node
 
-var music_audio_player_count := 2
-var current_music_player := 0
+var music_audio_player_count: int = 2
+var current_music_player: int = 0
 var music_players: Array[AudioStreamPlayer] = []
-var music_bus := "Music"
-var music_fade_duration := 1.5
+var music_bus: String = "Music"
+var music_fade_duration: float = 1.5
 
 
 func _ready() -> void:

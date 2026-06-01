@@ -4,8 +4,8 @@ extends Node2D
 signal activated
 signal deactivated
 
-var bodies := 0
-var is_active := false
+var bodies: int = 0
+var is_active: bool = false
 var off_rect: Rect2
 
 @onready var area_2d: Area2D = $Area2D

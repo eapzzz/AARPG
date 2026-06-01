@@ -6,7 +6,7 @@ const PICKUP = preload("uid://dl5vcyjj1xbno")
 
 @export var item_data: ItemData: set = _set_item_data
 
-var has_dropped := false
+var has_dropped: bool = false
 
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var has_dropped_data: PersistentDataHandler = $PersistentDataHandler

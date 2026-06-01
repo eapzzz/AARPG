@@ -1,9 +1,9 @@
 class_name PushableStatue
 extends RigidBody2D
 
-@export var push_speed := 30.0
+@export var push_speed: float = 30.0
 
-var push_direction := Vector2.ZERO: set = _set_push
+var push_direction: Vector2 = Vector2.ZERO: set = _set_push
 
 @onready var audio: AudioStreamPlayer2D = $AudioStreamPlayer2D
 

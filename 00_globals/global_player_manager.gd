@@ -6,7 +6,7 @@ const PLAYER = preload("uid://b4sse476kdci4")
 const INVENTORY_DATA: InventoryData = preload("uid://blj4h7rnd0fmh")
 
 var player: Player
-var player_spawned := false
+var player_spawned: bool = false
 
 
 func _ready() -> void:

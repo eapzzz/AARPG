@@ -80,7 +80,7 @@ func drop_items() -> void:
 		if drops[i] == null or drops[i].item == null:
 			continue
 		
-		var drop_count := drops[i].get_drop_count()
+		var drop_count: int = drops[i].get_drop_count()
 		
 		for j in drop_count:
 			var drop: ItemPickup = PICKUP.instantiate()as ItemPickup

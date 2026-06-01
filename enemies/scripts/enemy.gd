@@ -7,12 +7,12 @@ signal enemy_destroyed(hurt_box: HurtBox)
 
 const DIR_4: Array[Vector2] = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-@export var hp := 3
-
-var cardinal_direction := Vector2.DOWN
-var direction := Vector2.ZERO
+@export var hp: int = 3
+ 
+var cardinal_direction: Vector2 = Vector2.DOWN
+var direction: Vector2 = Vector2.ZERO
 var player: Player
-var invulnerable := false
+var invulnerable: bool = false
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
@@ -41,9 +41,9 @@ func set_direction(_new_direction: Vector2) -> bool:
 	if direction == Vector2.ZERO:
 		return false
 
-	var angle := (direction + cardinal_direction * 0.1).angle()
-	var direction_id := int(round(angle / TAU * DIR_4.size()))
-	var new_dir := DIR_4[direction_id]
+	var angle: float = (direction + cardinal_direction * 0.1).angle()
+	var direction_id: int = int(round(angle / TAU * DIR_4.size()))
+	var new_dir: Vector2 = DIR_4[direction_id]
 
 	if cardinal_direction == new_dir:
 		return false

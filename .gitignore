@@ -33,3 +33,8 @@ mono_crash.*.json
 # Project-specific ignores
 
 addons/
+
+# AI
+
+
+.antigravitycli

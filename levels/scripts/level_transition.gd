@@ -5,8 +5,8 @@ extends Area2D
 enum SIDE {LEFT, RIGHT, TOP, BOTTOM}
 
 @export_file("*.tscn") var level
-@export var target_transition_area := "LevelTransition"
-@export var center_player := false
+@export var target_transition_area: String = "LevelTransition"
+@export var center_player: bool = false
 @export_category("Collision Area Settings")
 @export_range(1, 12, 1, "or_greater") var size: int = 2:
 	set(_v):
@@ -16,7 +16,7 @@ enum SIDE {LEFT, RIGHT, TOP, BOTTOM}
 	set(_v):
 		side = _v
 		_update_area()
-@export var snap_to_grid := false:
+@export var snap_to_grid: bool = false:
 	set(_V):
 		_snap_to_grid()
 
@@ -52,7 +52,7 @@ func _place_player() -> void:
 
 
 func get_offset() -> Vector2:
-	var offset := Vector2.ZERO
+	var offset: Vector2 = Vector2.ZERO
 	var player_pos = PlayerManager.player.global_position
 	
 	if side == SIDE.LEFT or side == SIDE.RIGHT:
@@ -77,8 +77,8 @@ func get_offset() -> Vector2:
 
 
 func _update_area() -> void:
-	var new_rect := Vector2(32, 32)
-	var new_position := Vector2.ZERO
+	var new_rect: Vector2 = Vector2(32, 32)
+	var new_position: Vector2 = Vector2.ZERO
 	
 	if side == SIDE.TOP:
 		new_rect.x *= size

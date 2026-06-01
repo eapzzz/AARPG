@@ -3,7 +3,7 @@ extends CanvasLayer
 signal shown
 signal hidden
 
-var is_paused := false
+var is_paused: bool = false
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var button_save: Button = $Control/HBoxContainer/ButtonSave

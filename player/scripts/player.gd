@@ -6,9 +6,9 @@ signal player_damaged(hurt_box: HurtBox)
 
 const DIR_4: Array[Vector2] = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP]
 
-var cardinal_direction := Vector2.DOWN
-var direction := Vector2.ZERO
-var invulnerable := false
+var cardinal_direction: Vector2 = Vector2.DOWN
+var direction: Vector2 = Vector2.ZERO
+var invulnerable: bool = false
 var hp: int = 6
 var max_hp: int = 6
 
@@ -42,9 +42,9 @@ func set_direction() -> bool:
 	if direction == Vector2.ZERO:
 		return false
 
-	var angle := (direction + cardinal_direction * 0.1).angle()
-	var direction_id := int(round(angle / TAU * DIR_4.size()))
-	var new_dir := DIR_4[direction_id]
+	var angle: float = (direction + cardinal_direction * 0.1).angle()
+	var direction_id: int = int(round(angle / TAU * DIR_4.size()))
+	var new_dir: Vector2 = DIR_4[direction_id]
 
 	if cardinal_direction == new_dir:
 		return false
