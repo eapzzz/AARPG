@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c3vgv7gx3mmac"
-path="res://.godot/imported/npc_portrait_02.png-d15ebf9f96f7624ef2fdce78dd8e2c50.ctex"
+uid="uid://djwhvy4fb5wtx"
+path="res://.godot/imported/picture_bubble.svg-eac4a45968da796f126dc53c1dee6bfd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aargps_assets/npc_and_dialog/sprites/portraits/npc_portrait_02.png"
-dest_files=["res://.godot/imported/npc_portrait_02.png-d15ebf9f96f7624ef2fdce78dd8e2c50.ctex"]
+source_file="res://gui/dialog_system/icons/picture_bubble.svg"
+dest_files=["res://.godot/imported/picture_bubble.svg-eac4a45968da796f126dc53c1dee6bfd.ctex"]
 
 [params]
 
@@ -38,3 +38,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

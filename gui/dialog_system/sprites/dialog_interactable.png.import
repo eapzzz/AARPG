@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnf82u4i46nfo"
-path="res://.godot/imported/text_bubble.svg-ebaf4aa2f5bc60437abf802febbce22e.ctex"
+uid="uid://csy3tdll6wh1o"
+path="res://.godot/imported/dialog_interactable.png-b06916522babf3a73bf2278f60f667b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aargps_assets/npc_and_dialog/icons/text_bubble.svg"
-dest_files=["res://.godot/imported/text_bubble.svg-ebaf4aa2f5bc60437abf802febbce22e.ctex"]
+source_file="res://gui/dialog_system/sprites/dialog_interactable.png"
+dest_files=["res://.godot/imported/dialog_interactable.png-b06916522babf3a73bf2278f60f667b9.ctex"]
 
 [params]
 
@@ -38,6 +38,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

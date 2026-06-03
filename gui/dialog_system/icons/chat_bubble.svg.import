@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bndm32hhrebrq"
-path="res://.godot/imported/cutscene_bubble.svg-10763493d24187babf0afa37d4b3706d.ctex"
+uid="uid://r4tfkw0qhlln"
+path="res://.godot/imported/chat_bubble.svg-5244f4b6710ccf6560ad5db93a166cd3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aargps_assets/npc_and_dialog/icons/cutscene_bubble.svg"
-dest_files=["res://.godot/imported/cutscene_bubble.svg-10763493d24187babf0afa37d4b3706d.ctex"]
+source_file="res://gui/dialog_system/icons/chat_bubble.svg"
+dest_files=["res://.godot/imported/chat_bubble.svg-5244f4b6710ccf6560ad5db93a166cd3.ctex"]
 
 [params]
 

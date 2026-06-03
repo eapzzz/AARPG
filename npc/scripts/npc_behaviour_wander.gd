@@ -34,7 +34,8 @@ func start() -> void:
 		return
 	npc.state = "walk"
 	var _dir: Vector2
-	if global_position.distance_to(original_position) > wander_range * 32:
+	var half_size: float = wander_range * 16.0
+	if abs(global_position.x - original_position.x) > half_size or abs(global_position.y - original_position.y) > half_size:
 		var to_home: Vector2 = original_position - global_position
 		if abs(to_home.x) > abs(to_home.y):
 			_dir = Vector2.RIGHT if to_home.x > 0 else Vector2.LEFT
@@ -58,5 +59,6 @@ func start() -> void:
 
 func _set_wander_range(v: int) -> void:
 	wander_range = v
-	$CollisionShape2D.shape.radius = v * 32
+	$CollisionShape2D.shape.size.x = v * 32
+	$CollisionShape2D.shape.size.y = v * 32
 	pass

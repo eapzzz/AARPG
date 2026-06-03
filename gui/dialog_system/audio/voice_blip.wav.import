@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://b3bqghntue4ex"
-path="res://.godot/imported/voice_blip.wav-7c2a73f614616b65e990f1a64d2a14a1.sample"
+path="res://.godot/imported/voice_blip.wav-37efbf17b4383c051a8b45e930b2a646.sample"
 
 [deps]
 
-source_file="res://aargps_assets/npc_and_dialog/audio/voice_blip.wav"
-dest_files=["res://.godot/imported/voice_blip.wav-7c2a73f614616b65e990f1a64d2a14a1.sample"]
+source_file="res://gui/dialog_system/audio/voice_blip.wav"
+dest_files=["res://.godot/imported/voice_blip.wav-37efbf17b4383c051a8b45e930b2a646.sample"]
 
 [params]
 

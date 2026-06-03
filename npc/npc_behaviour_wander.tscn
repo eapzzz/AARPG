@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dq6gbwxcxat3m" path="res://npc/scripts/npc_behaviour_wander.gd" id="1_8i62t"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_8i62t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8i62t"]
+size = Vector2(32, 32)
 
 [node name="NpcBehaviourWander" type="Node2D" unique_id=1603692534]
 script = ExtResource("1_8i62t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1594965593]
-shape = SubResource("CircleShape2D_8i62t")
+shape = SubResource("RectangleShape2D_8i62t")
 debug_color = Color(0.70007306, 0.70229566, 0, 0.09411765)

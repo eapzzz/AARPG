@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2oyygvqm44jp"
-path="res://.godot/imported/npc_portrait_01.png-be5883a8e93f53c4b0d6a09d48877aa3.ctex"
+uid="uid://bqob36kkhcijn"
+path="res://.godot/imported/text-bubble.png-488ce4e6bb7cbabb1d9a8ef2ccdd8f4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aargps_assets/npc_and_dialog/sprites/portraits/npc_portrait_01.png"
-dest_files=["res://.godot/imported/npc_portrait_01.png-be5883a8e93f53c4b0d6a09d48877aa3.ctex"]
+source_file="res://gui/dialog_system/sprites/text-bubble.png"
+dest_files=["res://.godot/imported/text-bubble.png-488ce4e6bb7cbabb1d9a8ef2ccdd8f4e.ctex"]
 
 [params]
 
