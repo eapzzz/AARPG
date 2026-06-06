@@ -70,7 +70,7 @@ metadata/_custom_type_script = "uid://cdkb66e1trluv"
 [node name="DialogText2" type="Node" parent="NPC/DialogInteraction" unique_id=49450835]
 script = ExtResource("11_8gek7")
 text = "
-[wave]Heck yeah it's me[/wave]"
+[wave]Heck yeah it's me.[/wave]"
 npc_info = ExtResource("12_3oplg")
 metadata/_custom_type_script = "uid://cdkb66e1trluv"
 

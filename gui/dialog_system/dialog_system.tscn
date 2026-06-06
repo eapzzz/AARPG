@@ -6,6 +6,8 @@
 [ext_resource type="FontFile" uid="uid://bw75r8v6mlo7o" path="res://gui/fonts/Abaddon Bold.ttf" id="4_88kpi"]
 [ext_resource type="Texture2D" uid="uid://dh2u7m5al332f" path="res://npc/sprites/portraits/hero_portrait.png" id="5_88kpi"]
 [ext_resource type="FontFile" uid="uid://g1lse85466rk" path="res://gui/fonts/m5x7.ttf" id="6_7sl62"]
+[ext_resource type="AudioStream" uid="uid://b3bqghntue4ex" path="res://gui/dialog_system/audio/voice_blip.wav" id="6_226ex"]
+[ext_resource type="Script" uid="uid://c4xka404oubbe" path="res://gui/dialog_system/scripts/dialog_portrait.gd" id="6_f7oui"]
 
 [sub_resource type="Gradient" id="Gradient_7sl62"]
 colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
@@ -62,7 +64,7 @@ tracks/0/path = NodePath(".:modulate")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.53333336, 1),
+"times": PackedFloat32Array(0, 0.4, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(1.5257139, 1.5257139, 1.5257139, 1), Color(1, 1, 1, 1)]
@@ -143,10 +145,15 @@ text = "NAME"
 position = Vector2(50, 196)
 texture = ExtResource("5_88kpi")
 hframes = 4
+script = ExtResource("6_f7oui")
 
 [node name="Timer" type="Timer" parent="DialogUI" unique_id=1222343957]
+one_shot = true
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DialogUI" unique_id=1337616119]
+stream = ExtResource("6_226ex")
+max_polyphony = 6
+bus = &"SFX"
 
 [node name="DialogProgressIndicator" type="PanelContainer" parent="DialogUI" unique_id=1566637527]
 self_modulate = Color(0.20784314, 0.53333336, 0.34509805, 1)
@@ -166,3 +173,4 @@ vertical_alignment = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="DialogUI/DialogProgressIndicator" unique_id=1951532335]
 libraries/ = SubResource("AnimationLibrary_8jqgi")
+autoplay = &"default"
