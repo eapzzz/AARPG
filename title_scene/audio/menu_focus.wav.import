@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://brnw16bl2c5y3"
-path="res://.godot/imported/menu_focus.wav-c02595fc0e504cf03e21bd9e3b56e1f5.sample"
+path="res://.godot/imported/menu_focus.wav-02b23abe21a14001b61d3d23b7aaa932.sample"
 
 [deps]
 
-source_file="res://aargps_assets/title_screen/menu_focus.wav"
-dest_files=["res://.godot/imported/menu_focus.wav-c02595fc0e504cf03e21bd9e3b56e1f5.sample"]
+source_file="res://title_scene/audio/menu_focus.wav"
+dest_files=["res://.godot/imported/menu_focus.wav-02b23abe21a14001b61d3d23b7aaa932.sample"]
 
 [params]
 

@@ -1,0 +1,135 @@
+[gd_scene format=4 uid="uid://bq4iyfo3ahbqf"]
+
+[ext_resource type="Script" uid="uid://bdwasfcksa7fb" path="res://title_scene/title_scene.gd" id="1_i4gmv"]
+[ext_resource type="PackedScene" uid="uid://b5uxqkadlp5ta" path="res://tilemaps/dungeon_01.tscn" id="1_uvhto"]
+[ext_resource type="PackedScene" uid="uid://6rme35l44s2r" path="res://interactables/dungeon/pushable_statue.tscn" id="2_5xqkb"]
+[ext_resource type="AudioStream" uid="uid://hp16epr7n154" path="res://title_scene/audio/waves.mp3" id="2_wgj1g"]
+[ext_resource type="AudioStream" uid="uid://brnw16bl2c5y3" path="res://title_scene/audio/menu_focus.wav" id="3_lj5tl"]
+[ext_resource type="Texture2D" uid="uid://bo0c6me13h8d0" path="res://title_scene/sprites/title.png" id="4_0q24l"]
+[ext_resource type="AudioStream" uid="uid://cfjpdg4vgcgca" path="res://title_scene/audio/menu_select.wav" id="4_fkwea"]
+[ext_resource type="PackedScene" uid="uid://dbhv13lwe7daf" path="res://levels/player_spawn.tscn" id="5_0q24l"]
+[ext_resource type="PackedScene" uid="uid://dhr1wkvl1431s" path="res://title_scene/splash_scene.tscn" id="8_lj5tl"]
+
+[sub_resource type="Animation" id="Animation_5wnq4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1a1kh"]
+resource_name = "default"
+length = 5.0
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wgj1g"]
+_data = {
+&"RESET": SubResource("Animation_5wnq4"),
+&"default": SubResource("Animation_1a1kh")
+}
+
+[node name="TitleScene" type="Node2D" unique_id=1851364775]
+script = ExtResource("1_i4gmv")
+music = ExtResource("2_wgj1g")
+button_focus_audio = ExtResource("3_lj5tl")
+button_press_audio = ExtResource("4_fkwea")
+
+[node name="Dungeon01Tilemap" parent="." unique_id=226024561 instance=ExtResource("1_uvhto")]
+tile_map_data = PackedByteArray("AAAAAAAAAQAKAAcAAAAAAAEAAQAKAAcAAAAAAAIAAQAKAAcAAAAAAAMAAQAHAAUAAAAAAAQAAQAHAAYAAAAAAAUAAQAHAAcAAAAAAAYAAQADAAIAAAAAAAcAAQACAAAAAAAAAAgAAQADAAcAAAABAAAAAQAJAAAAAAABAAEAAQAJAAEAAAABAAIAAQAJAAIAAAABAAMAAQADAAQAAAABAAQAAQAGAAMAAAABAAUAAQAGAAQAAAABAAYAAQACAAIAAAABAAcAAQABAAEAAAABAAgAAQAMAAYAAAACAAAAAQAKAAAAAAACAAEAAQAKAAEAAAACAAIAAQAKAAIAAAACAAMAAQAHAAIAAAACAAQAAQAHAAMAAAACAAUAAQAHAAQAAAACAAYAAQABAAAAAAACAAcAAQAAAAEAAAACAAgAAQANAAYAAAADAAAAAQALAAAAAAADAAEAAQALAAEAAAADAAIAAQALAAIAAAADAAMAAQAIAAIAAAADAAQAAQAIAAMAAAADAAUAAQAIAAQAAAADAAYAAQABAAMAAAADAAcAAQAAAAQAAAADAAgAAQAOAAYAAAAEAAAAAQAEAAUAAAAEAAEAAQAEAAYAAAAEAAIAAQAEAAcAAAAEAAMAAQABAAAAAAAEAAQAAQACAAIAAAAEAAUAAQAAAAQAAAAEAAYAAQABAAQAAAAEAAcAAQAAAAAAAAAEAAgAAQAAAAcAAAAFAAAAAQAHAAUAAAAFAAEAAQAHAAYAAAAFAAIAAQAHAAcAAAAFAAMAAQABAAEAAAAFAAQAAQABAAAAAAAFAAUAAQAAAAEAAAAFAAYAAQACAAIAAAAFAAcAAQABAAEAAAAFAAgAAQADAAcAAAAGAAAAAQAOAAAAAAAGAAEAAQAMAAEAAAAGAAIAAQAMAAIAAAAGAAMAAQACAAIAAAAGAAQAAQAAAAMAAAAGAAUAAQABAAMAAAAGAAYAAQADAAAAAAAGAAcAAQACAAAAAAAGAAgAAQAMAAYAAAAHAAAAAQAKAAAAAAAHAAEAAQAMAAEAAAAHAAIAAQAMAAIAAAAHAAMAAQABAAIAAAAHAAQAAQACAAEAAAAHAAUAAQADAAIAAAAHAAYAAQACAAIAAAAHAAcAAQAAAAAAAAAHAAgAAQANAAYAAAAIAAAAAQAKAAAAAAAIAAEAAQAMAAEAAAAIAAIAAQAMAAIAAAAIAAMAAQABAAQAAAAIAAQAAQAAAAMAAAAIAAUAAQADAAIAAAAIAAYAAQABAAMAAAAIAAcAAQABAAEAAAAIAAgAAQAOAAYAAAAJAAAAAQAEAAUAAAAJAAEAAQAEAAYAAAAJAAIAAQAEAAcAAAAJAAMAAQAAAAIAAAAJAAQAAQADAAIAAAAJAAUAAQADAAIAAAAJAAYAAQAAAAMAAAAJAAcAAQADAAIAAAAJAAgAAQAAAAcAAAAKAAAAAQAHAAUAAAAKAAEAAQAHAAYAAAAKAAIAAQAHAAcAAAAKAAMAAQACAAAAAAAKAAQAAQADAAAAAAAKAAUAAQACAAEAAAAKAAYAAQABAAIAAAAKAAcAAQAAAAAAAAAKAAgAAQADAAcAAAALAAAAAQANAAAAAAALAAEAAQANAAEAAAALAAIAAQANAAIAAAALAAMAAQANAAMAAAALAAQAAQAEAAMAAAALAAUAAQAEAAQAAAALAAYAAQADAAEAAAALAAcAAQACAAIAAAALAAgAAQAKAAYAAAAMAAAAAQAOAAAAAAAMAAEAAQAOAAEAAAAMAAIAAQAOAAIAAAAMAAMAAQAOAAMAAAAMAAQAAQAFAAMAAAAMAAUAAQAFAAQAAAAMAAYAAQACAAEAAAAMAAcAAQADAAAAAAAMAAgAAQALAAYAAAANAAAAAQAPAAAAAAANAAEAAQAPAAEAAAANAAIAAQAPAAIAAAANAAMAAQACAAQAAAANAAQAAQAGAAMAAAANAAUAAQAGAAQAAAANAAYAAQADAAEAAAANAAcAAQACAAAAAAANAAgAAQAMAAYAAAAOAAAAAQAKAAcAAAAOAAEAAQAKAAcAAAAOAAIAAQAKAAcAAAAOAAMAAQAEAAUAAAAOAAQAAQAEAAYAAAAOAAUAAQAEAAcAAAAOAAYAAQACAAIAAAAOAAcAAQABAAAAAAAOAAgAAQAAAAcAAAA=")
+
+[node name="Props" type="Node2D" parent="Dungeon01Tilemap" unique_id=278570240]
+
+[node name="PushableStatue" parent="Dungeon01Tilemap/Props" unique_id=1809879569 instance=ExtResource("2_5xqkb")]
+position = Vector2(64, 200)
+
+[node name="PushableStatue2" parent="Dungeon01Tilemap/Props" unique_id=1856649115 instance=ExtResource("2_5xqkb")]
+position = Vector2(416, 200)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=247428296]
+process_mode = 3
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1440904531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/Control" unique_id=1117389398]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.49019608)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/Control" unique_id=1506550910]
+position = Vector2(240, 128)
+texture = ExtResource("4_0q24l")
+hframes = 4
+vframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer/Control/Sprite2D" unique_id=383560201]
+libraries/ = SubResource("AnimationLibrary_wgj1g")
+autoplay = &"default"
+
+[node name="ButtonNew" type="Button" parent="CanvasLayer/Control" unique_id=860294241]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 49.0
+offset_right = 56.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "New Game"
+
+[node name="ButtonContinue" type="Button" parent="CanvasLayer/Control" unique_id=665345236]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 81.0
+offset_right = 56.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Continue"
+
+[node name="SplashScene" parent="CanvasLayer" unique_id=1037473865 instance=ExtResource("8_lj5tl")]
+
+[node name="PlayerSpawn" parent="." unique_id=2147274448 instance=ExtResource("5_0q24l")]
+position = Vector2(240, 144)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=39885907]
+max_polyphony = 4
