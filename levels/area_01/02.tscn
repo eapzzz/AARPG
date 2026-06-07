@@ -15,6 +15,8 @@
 [ext_resource type="Resource" uid="uid://bdab7nbe1rl0i" path="res://npc/00_npcs/00_hero.tres" id="12_3oplg"]
 [ext_resource type="PackedScene" uid="uid://c61qnvyc0h7s5" path="res://npc/npc_behaviour_patrol.tscn" id="13_8gek7"]
 [ext_resource type="PackedScene" uid="uid://d31ayrd2auxyg" path="res://npc/patrol_location.tscn" id="14_3oplg"]
+[ext_resource type="Script" uid="uid://dxh704n11u36o" path="res://interactables/dialog/scripts/dialog_choice.gd" id="16_nbrcq"]
+[ext_resource type="Script" uid="uid://dxq1ime3bskty" path="res://interactables/dialog/scripts/dialog_branch.gd" id="17_aldnx"]
 
 [node name="02" type="Node2D" unique_id=1466939911]
 script = ExtResource("1_rdu5u")
@@ -106,5 +108,34 @@ enabled = true
 
 [node name="DialogText" type="Node" parent="NPC2/DialogInteraction" unique_id=469716986]
 script = ExtResource("11_8gek7")
-text = "Hi, How's Hero?"
+text = "Yo! Hero! Will you help retreive my magical flute from the dark dungeon?"
+metadata/_custom_type_script = "uid://cdkb66e1trluv"
+
+[node name="DialogChoice" type="Node" parent="NPC2/DialogInteraction" unique_id=1656109227]
+script = ExtResource("16_nbrcq")
+metadata/_custom_type_script = "uid://dxh704n11u36o"
+
+[node name="DialogBranch" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=2129773739]
+script = ExtResource("17_aldnx")
+text = "Count on it!"
+metadata/_custom_type_script = "uid://dxq1ime3bskty"
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch" unique_id=1057508103]
+script = ExtResource("11_8gek7")
+text = "Thank you dear hero! You are a true specimen!"
+metadata/_custom_type_script = "uid://cdkb66e1trluv"
+
+[node name="DialogText2" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch" unique_id=375433762]
+script = ExtResource("11_8gek7")
+text = "Oh, and be careful of the evil wizard who lurks in the dungeon!"
+metadata/_custom_type_script = "uid://cdkb66e1trluv"
+
+[node name="DialogBranch2" type="Node" parent="NPC2/DialogInteraction/DialogChoice" unique_id=744778562]
+script = ExtResource("17_aldnx")
+text = "NO!"
+metadata/_custom_type_script = "uid://dxq1ime3bskty"
+
+[node name="DialogText" type="Node" parent="NPC2/DialogInteraction/DialogChoice/DialogBranch2" unique_id=1298513373]
+script = ExtResource("11_8gek7")
+text = "Geez! Some lousy hero you are..."
 metadata/_custom_type_script = "uid://cdkb66e1trluv"

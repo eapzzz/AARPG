@@ -1,0 +1,65 @@
+[gd_resource type="Theme" format=3 uid="uid://cnc7wy8npws2w"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5hfl"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.69803923)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lebw"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.2)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r2cct"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.69803923)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va2gj"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.44705883)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f4s3u"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+bg_color = Color(0, 0, 0, 0.8)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+anti_aliasing = false
+
+[resource]
+Button/colors/font_color = Color(0.8509804, 0.81960785, 0.75686276, 1)
+Button/styles/disabled = SubResource("StyleBoxFlat_x5hfl")
+Button/styles/focus = SubResource("StyleBoxFlat_5lebw")
+Button/styles/hover = SubResource("StyleBoxFlat_r2cct")
+Button/styles/normal = SubResource("StyleBoxFlat_va2gj")
+Button/styles/pressed = SubResource("StyleBoxFlat_f4s3u")
+VBoxContainer/constants/separation = 5
