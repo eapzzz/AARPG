@@ -1,5 +1,6 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal interact_pressed
 
 const PLAYER = preload("uid://b4sse476kdci4")

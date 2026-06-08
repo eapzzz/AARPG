@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://dvhorfghsotkx"
-path="res://.godot/imported/charged.wav-33c59de1558a59e10dc3fd4ff8f17987.sample"
+path="res://.godot/imported/charged.wav-33f7dfe8e3e657ab9f952f0d76464e0a.sample"
 
 [deps]
 
-source_file="res://aargps_assets/player_updates/audio/charged.wav"
-dest_files=["res://.godot/imported/charged.wav-33c59de1558a59e10dc3fd4ff8f17987.sample"]
+source_file="res://player/audio/charged.wav"
+dest_files=["res://.godot/imported/charged.wav-33f7dfe8e3e657ab9f952f0d76464e0a.sample"]
 
 [params]
 

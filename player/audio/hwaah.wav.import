@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://cyjeyh0u6nijh"
-path="res://.godot/imported/hmm.wav-fb05dc52f88b66c0acfb4b75e8617893.sample"
+uid="uid://dj3aye6k13egf"
+path="res://.godot/imported/hwaah.wav-02f3b8ce4d3fc36e0268aabca04f5008.sample"
 
 [deps]
 
-source_file="res://aargps_assets/player_updates/audio/hmm.wav"
-dest_files=["res://.godot/imported/hmm.wav-fb05dc52f88b66c0acfb4b75e8617893.sample"]
+source_file="res://player/audio/hwaah.wav"
+dest_files=["res://.godot/imported/hwaah.wav-02f3b8ce4d3fc36e0268aabca04f5008.sample"]
 
 [params]
 

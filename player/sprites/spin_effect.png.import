@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bw5q82l2mdax8"
-path="res://.godot/imported/spin_effect.png-fd08ec979378592a039f95199b2ede39.ctex"
+path="res://.godot/imported/spin_effect.png-17636abfaa91412bc29b429a3751298e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://aargps_assets/player_updates/sprites/spin_effect.png"
-dest_files=["res://.godot/imported/spin_effect.png-fd08ec979378592a039f95199b2ede39.ctex"]
+source_file="res://player/sprites/spin_effect.png"
+dest_files=["res://.godot/imported/spin_effect.png-17636abfaa91412bc29b429a3751298e.ctex"]
 
 [params]
 

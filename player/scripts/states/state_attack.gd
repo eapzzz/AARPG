@@ -9,8 +9,9 @@ var attacking: bool = false
 @onready var animation_player: AnimationPlayer = $"../../AnimationPlayer"
 @onready var attack_anim: AnimationPlayer = $"../../Sprite2D/AttackEffectSprite/AnimationPlayer"
 @onready var audio: AudioStreamPlayer2D = $"../../Audio/AudioStreamPlayer2D"
-@onready var walk: StateWalk = $"../Walk"
 @onready var idle: StateIdle = $"../Idle"
+@onready var walk: StateWalk = $"../Walk"
+@onready var attack_charge: StateAttackCharge = $"../AttackCharge"
 @onready var hurt_box: HurtBox = %AttackHurtBox
 
 
@@ -62,5 +63,7 @@ func handle_input(_event: InputEvent) -> State:
 
 
 func _end_attack(_new_anim_name: String) -> void:
+	if Input.is_action_pressed("attack"):
+		state_machine.change_state(attack_charge)
 	attacking = false
 	pass

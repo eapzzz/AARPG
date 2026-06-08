@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://c0ym4xu68fj2c"
-path="res://.godot/imported/throw.wav-1e038c786ae72dd3115c1cf45f0f9d6d.sample"
+path="res://.godot/imported/throw.wav-7593e3d42f908297d1ff10e27940d188.sample"
 
 [deps]
 
-source_file="res://aargps_assets/player_updates/audio/throw.wav"
-dest_files=["res://.godot/imported/throw.wav-1e038c786ae72dd3115c1cf45f0f9d6d.sample"]
+source_file="res://player/audio/throw.wav"
+dest_files=["res://.godot/imported/throw.wav-7593e3d42f908297d1ff10e27940d188.sample"]
 
 [params]
 
